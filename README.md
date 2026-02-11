@@ -1,6 +1,6 @@
 # AI-Assisted GTM Experimentation System (V2.0)
 
-An agentic growth engineering platform that researches prospects, formulates hypotheses, generates personalized messages, and simulates campaign performance.
+An AI-assisted outbound experimentation system that generates personalized messaging variants and simulates B2B funnel performance.
 
 ## Features
 - **Project Structure**: Modular architecture separating UI logic from core business logic.
