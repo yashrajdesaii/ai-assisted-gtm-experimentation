@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+langchain
+langchain-community
+langchain-openai
+langchain-anthropic
+python-dotenv
+plotly
+faker

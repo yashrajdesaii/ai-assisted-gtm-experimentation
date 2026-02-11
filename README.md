@@ -1,0 +1,43 @@
+# AI-Assisted GTM Experimentation System (V2.0)
+
+An agentic growth engineering platform that researches prospects, formulates hypotheses, generates personalized messages, and simulates campaign performance.
+
+## Features
+- **Project Structure**: Modular architecture separating UI logic from core business logic.
+- **Agentic Workflow**:
+    - **Researcher Agent**: Identifies "triggers" (funding, hiring) to personalize outreach.
+    - **Strategist Agent**: Generates A/B message variants based on specific hypotheses.
+- **Simulation Engine**: Probabilistic model to estimate open/reply rates based on message quality and fit.
+- **Analytics Dashboard**: Real-time experiment tracking and "winning variant" identification.
+
+## Setup
+
+1.  **Install Dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+2.  **Configure API Keys**:
+    Create a `.env` file or set environment variables:
+    ```bash
+    export OPENAI_API_KEY="your-key-here"
+    # OR
+    export ANTHROPIC_API_KEY="your-key-here"
+    ```
+    *(The system will use a simulation mode if no keys are found)*
+
+3.  **Run the Application**:
+    ```bash
+    streamlit run src/ui/app.py
+    ```
+
+## Usage
+1.  **Define Leads**: Upload a CSV or use the "Generate Synthetic Leads" button.
+2.  **Configure Experiment**: Define your hypothesis for Variant A (e.g., ROI-focused) vs Variant B (e.g., Social Proof).
+3.  **Launch**: Click "Launch Experiment" to watch the agents work.
+4.  **Analyze**: Review the funnel metrics and strategy recommendations.
+
+## Directory Structure
+-   `src/core`: Backend logic (Agents, Models, Simulator).
+-   `src/ui`: Streamlit frontend application.
+-   `data`: (Optional) Store CSV files here.
