@@ -11,7 +11,7 @@ from src.core.models import Lead, Hypothesis, Message, Experiment, ExperimentRes
 from src.core.agents import Researcher, Strategist
 from src.core.simulator import FunnelSimulator
 
-st.set_page_config(page_title="ActivelyAI Growth Engineer", layout="wide", page_icon="rocket")
+st.set_page_config(page_title="GTM Lab | Agentic Growth", layout="wide", page_icon="🧪")
 
 # Initialize Session State
 if 'leads' not in st.session_state:
@@ -21,34 +21,85 @@ if 'experiment_results' not in st.session_state:
 if 'messages' not in st.session_state:
     st.session_state.messages = []
 
-# --- Custom CSS for "Premium Feel" ---
+# --- Custom CSS for "Sleek Aesthetic" ---
 st.markdown("""
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+    html, body, [class*="css"] {
+        font-family: 'Inter', sans-serif;
+    }
+    
     .stApp {
-        background-color: #0e1117;
-        color: #fafafa;
+        background-color: #050505;
+        color: #e0e0e0;
     }
+    
+    /* Sidebar Styling */
+    section[data-testid="stSidebar"] {
+        background-color: #0a0a0a;
+        border-right: 1px solid #1f1f1f;
+    }
+    
+    /* Card / Container Styling */
     .metric-card {
-        background-color: #262730;
-        border-radius: 10px;
-        padding: 20px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 24px;
         text-align: center;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        backdrop-filter: blur(10px);
+        transition: transform 0.2s;
     }
+    .metric-card:hover {
+        transform: translateY(-2px);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Buttons */
     .stButton>button {
         width: 100%;
         border-radius: 8px;
         height: 3em;
-        background-color: #ff4b4b;
+        background: linear-gradient(90deg, #4f46e5 0%, #7c3aed 100%);
         color: white;
+        border: none;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
     }
+    .stButton>button:hover {
+        opacity: 0.9;
+        box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+    }
+    
+    /* Headers */
+    h1, h2, h3 {
+        color: #ffffff;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    }
+    
+    /* Inputs */
+    .stTextInput>div>div>input, .stTextArea>div>div>textarea {
+        background-color: #121212;
+        color: #fff;
+        border: 1px solid #333;
+        border-radius: 8px;
+    }
+    .stTextInput>div>div>input:focus, .stTextArea>div>div>textarea:focus {
+        border-color: #7c3aed;
+        box-shadow: 0 0 0 1px #7c3aed;
+    }
+
 </style>
 """, unsafe_allow_html=True)
 
 # --- Sidebar: Configuration ---
 with st.sidebar:
-    st.image("https://placehold.co/200x60/png?text=ActivelyAI", width=200)
-    st.title("Experiment Config")
+    st.markdown("## 🧪 **GTM Lab**")
+    st.caption("Agentic Experimentation Engine")
+    st.divider()
     
     st.subheader("1. Define Target Audience")
     uploaded_file = st.file_uploader("Upload CSV (Name, Company, Title)", type=['csv'])
@@ -74,7 +125,9 @@ with st.sidebar:
     h2_desc = st.text_area("Variant B (Challenger/Social)", "Focus on peer validation and social proof.", height=70)
 
 # --- Main Dashboard ---
-st.title("AI-Assisted GTM Experimentation System")
+st.title("GTM Lab Dashboard")
+st.markdown("*Design • Experiment • Scale*")
+st.divider()
 
 col1, col2 = st.columns([2, 1])
 
