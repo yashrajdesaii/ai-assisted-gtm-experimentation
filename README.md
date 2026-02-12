@@ -2,8 +2,9 @@
 
 An AI-assisted outbound experimentation system that generates personalized messaging variants and simulates B2B funnel performance.
 
-**Live Demo:** <https://ai-assisted-gtm-experimentation.streamlit.app/>  
-**Repo:** <https://github.com/yashrajdesaii/ai-assisted-gtm-experimentation>
+🚀 [Live Demo](https://ai-assisted-gtm-experimentation.streamlit.app/)
+
+📂 [GitHub Repository](https://github.com/yashrajdesaii/ai-assisted-gtm-experimentation)
 
 ## Features
 - **Project Structure**: Modular architecture separating UI logic from core business logic.
