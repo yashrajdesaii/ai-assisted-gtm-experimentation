@@ -10,6 +10,18 @@ An AI-assisted outbound experimentation system that generates personalized messa
 - **Simulation Engine**: Probabilistic model to estimate open/reply rates based on message quality and fit.
 - **Analytics Dashboard**: Real-time experiment tracking and "winning variant" identification.
 
+## Demo Screenshots
+
+### 1) Dashboard
+![Dashboard](assets/01-dashboard.png)
+
+### 2) Results & Variant Analysis
+![Results](assets/02-results.png)
+
+### 3) Generated Outreach Examples
+![Message Log](assets/03-message-log.png)
+
+
 ## Setup
 
 1.  **Install Dependencies**:
